@@ -34,7 +34,9 @@
               <ul>
                 <li v-for="item in cart" :key="item.id">
                   {{ item.name }} - ${{ item.price }}
-                  <button @click="removeFromCart(item.id)">Remove</button>
+                  <button @click="removeFromCart(item.id)">
+                    <img src="asset/icons8-delete.svg" />
+                  </button>
                 </li>
               </ul>
             </div>
@@ -50,6 +52,7 @@
                     :price="item.price"
                     :src="item.imgSrc"
                     :name="item.name"
+                    :like="item.like"
                     @handlelike="handlelike"
                     @addtocart="addToCart"
                   >

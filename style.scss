@@ -54,6 +54,15 @@ body {
     font-size: 1.5rem;
   }
 }
+
+.btn-secondary.liked i {
+  /* добавлено */
+  color: rgb(
+    255,
+    255,
+    255
+  ); /* Change to your preferred color for a filled heart */
+}
 .btn {
   color: #ffff;
   border: none;
@@ -81,11 +90,15 @@ body {
   right: -300px;
   width: 300px;
   height: 100%;
-  background: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+  box-shadow: -2px 0 5px rgba(185, 185, 185, 0.5);
   padding: 20px;
   z-index: 1000;
   transition: right 0.3s ease-in-out;
+
+  h3 {
+    color: black;
+  }
 }
 
 .open-menu {

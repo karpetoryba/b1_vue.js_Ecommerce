@@ -11,6 +11,7 @@ createApp({
       itemList: [],
       numberLike: 0,
       showShopMenu: false,
+      cart: [], // добавлено
     };
   },
   methods: {
@@ -27,6 +28,15 @@ createApp({
     },
     showMenu() {
       this.showShopMenu = !this.showShopMenu;
+    },
+    addToCart(id) {
+      const item = this.itemList.find((item) => item.id === id);
+      if (item) {
+        this.cart.push(item);
+      }
+    },
+    removeFromCart(id) {
+      this.cart = this.cart.filter((item) => item.id !== id);
     },
   },
   mounted() {
