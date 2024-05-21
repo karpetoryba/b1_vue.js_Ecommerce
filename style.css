@@ -1,0 +1,191 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgb(231, 229, 229);
+}
+.menu li {
+  padding: 10px;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 300%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgb(255, 202, 137);
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.btn-secondary.liked i {
+  /* добавлено */
+  color: rgb(255, 255, 255); /* Change to your preferred color for a filled heart */
+}
+
+.btn {
+  color: white;
+  border: none;
+  width: 50%;
+  padding: 20px;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: rgb(99, 216, 216);
+}
+.btn-primary:hover {
+  background-color: #3acece;
+}
+.btn-secondary {
+  background-color: rgb(255, 202, 137);
+}
+.btn-secondary:hover {
+  background-color: red;
+}
+
+.nav-content {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -2px 0 5px rgba(185, 185, 185, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+}
+.nav-content h3 {
+  color: black;
+}
+
+.open-menu {
+  right: 0;
+}
+
+.closed-menu {
+  right: -300px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.navbar {
+  color: #fff;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.like,
+.shop {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+}
+
+.col-10 {
+  flex: 0 0 83.333%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+}
+
+.col-2 {
+  flex: 0 0 16.667%;
+}/*# sourceMappingURL=style.css.map */
