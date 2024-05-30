@@ -8,10 +8,12 @@ createApp({
   },
   data() {
     return {
+      isCircleVisible: false,
       itemList: [],
       numberLike: 0,
       showShopMenu: false,
-      cart: [], // добавлено
+      cart: [],
+      total: 0,
     };
   },
   methods: {
@@ -29,14 +31,31 @@ createApp({
     showMenu() {
       this.showShopMenu = !this.showShopMenu;
     },
+    toggleCircleVisibility() {
+      this.isCircleVisible = !this.isCircleVisible;
+    },
     addToCart(id) {
       const item = this.itemList.find((item) => item.id === id);
       if (item) {
-        this.cart.push(item);
+        const cartItem = this.cart.find((cartItem) => cartItem.id === id);
+        if (cartItem) {
+          cartItem.number += 1;
+        } else {
+          this.cart.push({ ...item, number: 1 });
+        }
       }
+      this.updatetotalprice();
     },
     removeFromCart(id) {
       this.cart = this.cart.filter((item) => item.id !== id);
+      this.updatetotalprice();
+    },
+    updatetotalprice() {
+      let total = 0;
+      this.cart.forEach((item) => {
+        total += item.price * item.number;
+      });
+      this.total = total;
     },
   },
   mounted() {

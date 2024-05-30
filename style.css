@@ -149,7 +149,24 @@ body {
 }
 
 .navbar {
-  color: #fff;
+  color: #000000;
+}
+.navbar .red-circle {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.navbar .heart {
+  position: relative;
+  display: inline-block;
+}
+.navbar .shop-shopping {
+  position: relative;
+  display: inline-block;
 }
 
 .menu {

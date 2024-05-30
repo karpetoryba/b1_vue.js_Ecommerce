@@ -18,12 +18,18 @@
           <nav class="navbar">
             <ul class="menu">
               <li>
-                <a href="#" class="like"><i class="fa-solid fa-heart"></i></a>
+                <div class="heart">
+                  <div v-if="isCircleVisible" class="red-circle"></div>
+                  <a href="#" class="like"><i class="fa-solid fa-heart"></i></a>
+                </div>
               </li>
               <li>
-                <a href="#" class="shop" @click.prevent="showMenu">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </a>
+                <div class="shop-shopping">
+                  <div class="red-circle"></div>
+                  <a href="#" class="shop" @click.prevent="showMenu">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </div>
               </li>
             </ul>
             <div
@@ -33,11 +39,14 @@
               <h3>Shopping Cart</h3>
               <ul>
                 <li v-for="item in cart" :key="item.id">
-                  {{ item.name }} - ${{ item.price }}
+                  {{ item.name }} - ${{ item.price }} {{item.imgSrc}}
                   <button @click="removeFromCart(item.id)">
                     <img src="asset/icons8-delete.svg" />
                   </button>
                 </li>
+                <div>
+                  <h3>Total : {{total}}</h3>
+                </div>
               </ul>
             </div>
           </nav>
